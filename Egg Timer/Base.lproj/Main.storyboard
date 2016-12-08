@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Egg_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsQ-NB-d4e">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Egg Timer" id="df3-Jm-hWX">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="0Dr-5I-Yic">
+                                            <connections>
+                                                <action selector="pauseButton:" destination="BYZ-38-t0r" id="PuT-hO-i2Z"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="HIS-Yu-lKV">
+                                            <connections>
+                                                <action selector="playButton:" destination="BYZ-38-t0r" id="0tA-JK-zre"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYV-dC-B02">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="eTP-6t-Mwz"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="-10" id="zEF-ED-8Ph">
+                                        <connections>
+                                            <action selector="subTimeButton:" destination="BYZ-38-t0r" id="0tr-fC-5tu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="yZu-WF-se2"/>
+                                    <barButtonItem title="reset" id="jKm-Kd-kk9">
+                                        <connections>
+                                            <action selector="resetTimeButton:" destination="BYZ-38-t0r" id="Mr2-KQ-oQI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="87y-dv-E70"/>
+                                    <barButtonItem title="+10" id="v3V-81-2Id">
+                                        <connections>
+                                            <action selector="addTimeButton:" destination="BYZ-38-t0r" id="bAi-E0-SLu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="210" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPr-74-uO1">
+                                <rect key="frame" x="149" y="314" width="76" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AYV-dC-B02" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IDQ-cX-Ycu"/>
+                            <constraint firstItem="AYV-dC-B02" firstAttribute="trailing" secondItem="fsQ-NB-d4e" secondAttribute="trailing" id="Ik5-as-2l6"/>
+                            <constraint firstItem="AYV-dC-B02" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KON-RP-rJc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DPr-74-uO1" secondAttribute="trailing" constant="134" id="PZx-6H-J9M"/>
+                            <constraint firstItem="DPr-74-uO1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="133" id="VO0-A3-5ak"/>
+                            <constraint firstItem="AYV-dC-B02" firstAttribute="leading" secondItem="fsQ-NB-d4e" secondAttribute="leading" id="ass-dK-fT5"/>
+                            <constraint firstItem="DPr-74-uO1" firstAttribute="top" secondItem="fsQ-NB-d4e" secondAttribute="bottom" constant="250" id="gXt-n3-gvp"/>
+                            <constraint firstItem="AYV-dC-B02" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="hq7-VI-b8d"/>
+                            <constraint firstItem="AYV-dC-B02" firstAttribute="top" secondItem="DPr-74-uO1" secondAttribute="bottom" constant="270" id="jcC-9M-1Ts"/>
+                            <constraint firstItem="DPr-74-uO1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="v7P-ay-pZw"/>
+                            <constraint firstItem="DPr-74-uO1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x8i-2a-4bs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelTime" destination="DPr-74-uO1" id="Mz8-QH-rtm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
